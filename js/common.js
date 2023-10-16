@@ -17,9 +17,14 @@ function getProfile(token) {
         success: function (rs) {
             if (rs.response.length > 0) {
                 let data = rs.response[0];
-                // console.log(data);
+                console.log(data);
                 $("#home").find(".full-name").text(`${data['first_name']} ${data['last_name']}`)
+                $("#home").find(".img-fluid").attr('src', `${data['img']}`)
                 $('#about').find(".name").text(`Name: ${data['first_name']} ${data['last_name']}`)
+                $('#about').find(".birthday").text(`Birthday: ${data['birthday']}`)
+                $('#about').find(".degree").text(`Degree: ${data['degree']}`)
+                $('#about').find(".experience").text(`Experience: ${data['experience']}`)
+                $("#about").find(".img-fluid").attr('src', `${data['img']}`)
                 $('#about').find(".phone").text(`Phone: ${data['phone']} `)
                 $('#about').find(".email").text(`Email: ${data['email']} `)
             }
