@@ -17,7 +17,7 @@ function getProfile(token) {
         success: function (rs) {
             if (rs.response.length > 0) {
                 let data = rs.response[0];
-                console.log(data);
+                // console.log(data);
                 $("#home").find(".full-name").text(`${data['first_name']} ${data['last_name']}`)
                 $("#home").find(".img-fluid").attr('src', `${data['img']}`)
                 $('#about').find(".name").text(`Name: ${data['first_name']} ${data['last_name']}`)
@@ -92,7 +92,7 @@ function getSkill(token) {
                 $.each(data, function (key, value) {
                     // console.log(value);
                     if (value.type == 1) {
-                        console.log(1)
+                        // console.log(1)
                         backHtml_ += `<div class="skill mb-4 ">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">${value.title}</h6>
